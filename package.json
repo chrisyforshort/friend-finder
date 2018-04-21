@@ -20,6 +20,7 @@
   "homepage": "https://github.com/chrisyforshort/friend-finder#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "express": "^4.16.3",
     "nodemon": "^1.17.3"
   }
 }
