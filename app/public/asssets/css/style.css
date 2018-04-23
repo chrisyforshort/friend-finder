@@ -1,0 +1,46 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+
+
+#bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: scroll;
+    height: 100%;
+    background-position: center;
+}
+
+h1 {
+    z-index: 1;
+    margin: auto;
+    border-bottom: solid gainsboro 2px;
+    width: 600px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 50px;
+}
+
+.homeDiv {
+    text-align: center;
+    top: 250px;
+    height: 300px;
+    border: solid grey 1px;
+    background-color: aliceblue;
+    opacity: .8;
+    border-radius: 25px;
+}
+
+.quote {
+    color: rgb(105, 105, 105);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+#instructions {
+    font-size: 22px;
+}
