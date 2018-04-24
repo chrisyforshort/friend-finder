@@ -1,43 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <title>Friend-Finder</title>
     <title>Friend-Finder Survey</title>
 </head>
+
 <body>
     <h1> Survey</h1>
-<!-- Questions
-1. If you saw a scary monster, how likely are you to world star fight it?
-2. You rely more on your brains than brawns?
-3. How far are you willing to go to set up the perfect surprise?
-4. How likely are you to be in a relationship?
-5. Do people come to you for advice?
-6. How giving would you say you are?
-7. Do you like to plan more or be more spontaneous?
-8. You think everyone's views should be respected regardless of whether they are supported by facts or not.
-9. Do you like to be alone or the center of attention at a party?
-10. If you could explore either heaven or hell for a day and return, where would you more likely want to go?
- -->
+    <form>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="name" class="form-control" id="nameInput" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label>1. If you saw a scary monster, how likely are you to world star fight it?</label>
+            <br>
+            <select class="form-control" id="q1">
+                <option>1 (Least)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Most)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>2. You rely more on your brains than brawns?</label>
+            <br>
+            <select class="form-control" id="q2">
+                <option>1 (Brains)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Brawns)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>3. How far are you willing to go to set up the perfect surprise? </label>
+            <br>
+            <select class="form-control" id="q3">
+                <option>1 (Least Far)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Most Far)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>4. How likely are you to be in a relationship?</label>
+            <br>
+            <select class="form-control" id="q4">
+                <option>1 (Least)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Most)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>5. Do people come to you for advice?</label>
+            <br>
+            <select class="form-control" id="q5">
+                <option>1 (Not Really)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (All the Time)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>6. How giving would you say you are?</label>
+            <br>
+            <select class="form-control" id="q6">
+                <option>1 (Least)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Most)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>7. Do you like to plan more or be more spontaneous?</label>
+            <br>
+            <select class="form-control" id="q7">
+                <option>1 (More Planning)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Spontaneous Time)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>8. You think everyone's views should be respected regardless of whether they are supported by facts or not. </label>
+            <br>
+            <select class="form-control" id="q8">
+                <option>1 (No Respect)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Respected)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>9. Do you like to be alone or the center of attention at a party?</label>
+            <br>
+            <select class="form-control" id="q9">
+                <option>1 (Least)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Most)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>10. If you could explore either heaven or hell for a day and return, where would you more likely want to go?</label>
+            <br>
+            <select class="form-control" id="q10">
+                <option>1 (Least)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Most)</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
     <button class="getStuff">Get</button>
     <button class="postStuff">Post</button>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script>
-    $('.getStuff').on('click', function(){
-        $.get('/api/friends').then(function(r){
-            console.log(r)
+        $('.getStuff').on('click', function () {
+            $.get('/api/friends').then(function (r) {
+                console.log(r)
+            })
         })
-    })
 
-    $('.postStuff').on('click', function(){
-        var friend = {name: '', photo:'', scores: []}
-        $.post('api/friends', friends).then(function (r){
-            console.log(r)
+        $('.postStuff').on('click', function () {
+            var friend = { name: '', photo: '', scores: [] }
+            $.post('api/friends', friends).then(function (r) {
+                console.log(r)
+            })
         })
-    })
 
     </script>
 </body>
+
 </html>
