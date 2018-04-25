@@ -9,129 +9,156 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
-    <title>Friend-Finder</title>
     <title>Friend-Finder Survey</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: solid gainsboro 1px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <h1> Survey</h1>
-    <form>
-        <div class="form-group">
-            <label>Name</label>
-            <input type="name" class="form-control" id="nameInput" placeholder="Enter name">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1>Awesome Survey</h1>
+            <form>
+                <h2>Basic Information</h2>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="name" class="form-control" id="nameInput" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                        <label>Link to a Picture of You</label>
+                        <input type="name" class="form-control" id="nameInput" placeholder="Link to Picture">
+                    </div>
+                <h2>Questions</h2>
+                <div class="form-group">
+                    <label>1. If you saw a scary monster, how likely are you to worldstar fight it?</label>
+                    <br>
+                    <select class="form-control" id="q1">
+                        <option>1 (Least)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Most)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>2. You rely more on your brains than brawns?</label>
+                    <br>
+                    <select class="form-control" id="q2">
+                        <option>1 (Brains)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Brawns)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>3. How far are you willing to go to set up the perfect surprise? </label>
+                    <br>
+                    <select class="form-control" id="q3">
+                        <option>1 (Least Far)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Most Far)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>4. How likely are you to be in a relationship?</label>
+                    <br>
+                    <select class="form-control" id="q4">
+                        <option>1 (Least)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Most)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>5. Do people come to you for advice?</label>
+                    <br>
+                    <select class="form-control" id="q5">
+                        <option>1 (Not Really)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (All the Time)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>6. How giving would you say you are?</label>
+                    <br>
+                    <select class="form-control" id="q6">
+                        <option>1 (Least)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Most)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>7. Do you like to plan more or be more spontaneous?</label>
+                    <br>
+                    <select class="form-control" id="q7">
+                        <option>1 (More Planning)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Spontaneous Time)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>8. You think everyone's views should be respected regardless of whether they are supported by facts or
+                        not. </label>
+                    <br>
+                    <select class="form-control" id="q8">
+                        <option>1 (No Respect)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Respected)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>9. Do you like to be alone or the center of attention at a party?</label>
+                    <br>
+                    <select class="form-control" id="q9">
+                        <option>1 (Least)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Most)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>10. If you could explore either heaven or hell for a day and return, where would you more likely want
+                        to go?</label>
+                    <br>
+                    <select class="form-control" id="q10">
+                        <option>1 (Least)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Most)</option>
+                    </select>
+
+                </div>
+                <button type="submit" class="btn btn-primary float-right">Submit</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label>1. If you saw a scary monster, how likely are you to world star fight it?</label>
-            <br>
-            <select class="form-control" id="q1">
-                <option>1 (Least)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Most)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>2. You rely more on your brains than brawns?</label>
-            <br>
-            <select class="form-control" id="q2">
-                <option>1 (Brains)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Brawns)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>3. How far are you willing to go to set up the perfect surprise? </label>
-            <br>
-            <select class="form-control" id="q3">
-                <option>1 (Least Far)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Most Far)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>4. How likely are you to be in a relationship?</label>
-            <br>
-            <select class="form-control" id="q4">
-                <option>1 (Least)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Most)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>5. Do people come to you for advice?</label>
-            <br>
-            <select class="form-control" id="q5">
-                <option>1 (Not Really)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (All the Time)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>6. How giving would you say you are?</label>
-            <br>
-            <select class="form-control" id="q6">
-                <option>1 (Least)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Most)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>7. Do you like to plan more or be more spontaneous?</label>
-            <br>
-            <select class="form-control" id="q7">
-                <option>1 (More Planning)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Spontaneous Time)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>8. You think everyone's views should be respected regardless of whether they are supported by facts or not. </label>
-            <br>
-            <select class="form-control" id="q8">
-                <option>1 (No Respect)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Respected)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>9. Do you like to be alone or the center of attention at a party?</label>
-            <br>
-            <select class="form-control" id="q9">
-                <option>1 (Least)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Most)</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>10. If you could explore either heaven or hell for a day and return, where would you more likely want to go?</label>
-            <br>
-            <select class="form-control" id="q10">
-                <option>1 (Least)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Most)</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <div class="col-md-2"></div>
+    </div>
 
     <button class="getStuff">Get</button>
     <button class="postStuff">Post</button>
