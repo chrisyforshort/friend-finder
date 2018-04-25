@@ -1,12 +1,9 @@
+var friendsData = require('../data/friends.js');
+
 module.exports = function (app) {
-    var answersArr = []
-
-    app.get('/api/friends', function(req, res){
-        res.send('hi')
-    })
-
+    // Adds user to the FriendsData Array //
     app.post('/api/friends', function(req, res){
-        answersArr(req.body)
-        res.json(answersArr.length)
+        friendsData.push(req.body);
+        res.json(true);
     })
 }
